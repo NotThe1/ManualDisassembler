@@ -3,11 +3,6 @@ package manualDisassembler;
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Dimension;
-
-//package codeSupport;
-
-//import hardware.ConditionCodeRegister;
-
 import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.GridBagConstraints;
@@ -85,12 +80,15 @@ import javax.swing.text.SimpleAttributeSet;
 import javax.swing.text.StyleConstants;
 import javax.swing.text.StyledDocument;
 
+import appLogger.AppLogger;
+import hdNumberBox.Hex64KSpinner;
+
 //import appLogger.AppLogger;
 //import myComponents.Hex64KSpinner;
 
 public class ManualDisassembler {
 	private ApplicationAdapter applicationAdapter = new ApplicationAdapter();
-	private myComponents.AppLogger log = myComponents.AppLogger.getInstance();
+	private AppLogger log = AppLogger.getInstance();
 	private AdapterText adapterText = new AdapterText();
 
 	private String hostDirectory;
