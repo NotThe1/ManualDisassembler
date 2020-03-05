@@ -94,7 +94,7 @@ public class ManualDisassembler {
 	private String hostDirectory;
 	// private String currentFileName;
 	private JFrame frame;
-	private static String version = "Version 2.6.1";
+	private static String version = "Version 3.0.0";
 	private SimpleAttributeSet[] attributeSets;
 	private TreeMap<Byte, String> literalListTree;
 //	private HashMap<Byte,String> printableASCIIs;
@@ -1289,7 +1289,7 @@ public class ManualDisassembler {
 		myPrefs.put("AssemblerType", btn8080Z80.getText());
 		// myPrefs = null;
 
-		System.exit(0);
+//		System.exit(0);
 	}// appClose
 
 	@SuppressWarnings("unchecked")

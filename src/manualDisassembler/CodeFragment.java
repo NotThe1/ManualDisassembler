@@ -15,7 +15,6 @@ public class CodeFragment implements Comparable<CodeFragment>, Serializable {
 	public static final String LITERAL = "literal";
 	public static final String RESERVED = "reserved";
 	public static final String UNKNOWN = "unknown";
-	
 
 	public CodeFragment(int startLoc, int endLoc, String type) {
 		this.startLoc = startLoc;
@@ -24,7 +23,7 @@ public class CodeFragment implements Comparable<CodeFragment>, Serializable {
 		if (startLoc > endLoc) {
 			this.endLoc = startLoc;
 			this.type = UNKNOWN;
-		}//if
+		} // if
 	}// Constructor
 
 	public int size() {
@@ -39,4 +38,17 @@ public class CodeFragment implements Comparable<CodeFragment>, Serializable {
 	public int compareTo(CodeFragment ct0) {
 		return startLoc - ct0.startLoc;
 	}// compareTo
+
+	@Override
+	public boolean equals(Object ct0) {
+		return ((ct0 != null) && (ct0 instanceof CodeFragment) && ((startLoc - ((CodeFragment) ct0).startLoc) == 0))
+				? true
+				: false;
+	}// equals
+	
+	@Override
+	public int hashCode() {
+		return super.hashCode();
+	}//hashCode
+
 }// class CodeFragment
